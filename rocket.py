@@ -3,13 +3,16 @@ import random
 
 class Rocket:
 
-    # initialize the rockets coordinate. Each rocket has a X and Y coordinate
     def __init__(self):
+
+        """Initialize the rockets coordinate. Each rocket has a X and Y coordinate."""
+
         self.x = 0
         self.y = 0
 
-    # functions to move the rocket one point towards up/down/right/left (marked with x and y coordinates).
-    # It increments or decrements the value of X or Y by one point.
+    """Functions to move the rocket one point towards up/down/right/left (marked with x and y coordinates).
+        It increments or decrements the value of X or Y by one point."""
+
     def rocketMoveUp(self):
         self.y += 1
 
@@ -22,24 +25,30 @@ class Rocket:
     def rocketMoveLeft(self):
         self.x -= 1
 
-    # define a simple movement function, so the rocket can randomly move in the battlefield by itself
     def movement(self):
+
+        """Define a simple movement function, so the rocket can randomly move in the battlefield by itself."""
+
         self.x = random.randint(1, 10)
         self.y = random.randint(1, 10)
 
 
 class Battlefield:
-    # create and initialize the battlefield with static coordinate - it is 10 points high and 10 points long
+
+    """Create and initialize the battlefield with static coordinate - it is 10 points high and 10 points long."""
+
     def __init__(self):
         self.bfx = 10
         self.bfy = 10
 
-        # initialize the mine coordinates
+        """Initialize the mine coordinates."""
+
         self.minex = 0
         self.miney = 0
 
     def mine(self):
-        # randomly generate the mine coordinates
+        """Do randomly generate the mine coordinates."""
+
         self.minex = random.randint(1, 10)
         self.miney = random.randint(1, 10)
 
