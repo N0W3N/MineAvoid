@@ -1,4 +1,6 @@
 from rocket import *
+from battlefield import *
+from station import *
 import time
 
 newRocket = Rocket()
